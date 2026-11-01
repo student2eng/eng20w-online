@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Eng20w is an English vocabulary learning project developed by Ibtikary. Learn useful words through focused 20-word sessions, clear meanings, pronunciation and practical examples.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://eng20w.online/">
+  <title>Eng20w — Learn 20 Words. One Session at a Time.</title>
+  <style>
+    :root {
+      --purple: #5146df;
+      --purple-dark: #4036c4;
+      --teal: #36b9a6;
+      --ink: #171b2b;
+      --muted: #687080;
+      --line: #e9eaf0;
+      --soft: #f7f8fc;
+      --white: #fff;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .topbar {
+      min-height: 78px; display: flex; align-items: center;
+      justify-content: space-between; gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: inline-flex; flex-direction: column; text-decoration: none; line-height: 1; }
+    .brand-name { font-size: 29px; font-weight: 850; letter-spacing: -1.7px; color: #5550b8; }
+    .brand-name span { color: var(--teal); }
+    .brand-tag { margin-top: 5px; color: #7b8190; font-size: 9px; font-weight: 750; letter-spacing: 3px; }
+    .top-link { color: var(--purple); text-decoration: none; font-weight: 700; }
+    .top-link:hover, .text-link:hover { text-decoration: underline; }
+    .hero { text-align: center; padding: 86px 0 72px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      color: var(--purple); font-size: 13px; font-weight: 750;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+    h1 {
+      max-width: 850px; margin: 19px auto 18px;
+      font-size: clamp(38px, 6vw, 64px); line-height: 1.12;
+      letter-spacing: -.045em; font-weight: 820;
+    }
+    h1 span { color: var(--purple); }
+    .intro { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: clamp(17px, 2.2vw, 20px); }
+    .actions { margin-top: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 13px 23px; border-radius: 12px;
+      background: var(--purple); color: white; text-decoration: none;
+      font-weight: 750; box-shadow: 0 8px 20px rgba(81,70,223,.16);
+      transition: background .2s ease, transform .2s ease;
+    }
+    .button:hover { background: var(--purple-dark); transform: translateY(-1px); }
+    .button.secondary { background: white; color: var(--purple); border: 1px solid #deddf8; box-shadow: none; }
+    .section { padding: 64px 0; }
+    .section.soft { background: var(--soft); }
+    .section-heading { max-width: 720px; margin-bottom: 28px; }
+    .kicker { color: var(--purple); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    h2 { margin: 8px 0 10px; font-size: clamp(27px, 4vw, 36px); line-height: 1.2; letter-spacing: -.03em; }
+    .section-lead { margin: 0; color: var(--muted); font-size: 17px; }
+    .about-card, .project-card {
+      border: 1px solid var(--line); border-radius: 20px; background: white;
+      padding: clamp(24px, 4vw, 38px); box-shadow: 0 12px 35px rgba(20,25,50,.045);
+    }
+    .about-card p { margin: 0 0 15px; color: var(--muted); font-size: 16px; }
+    .about-card p:last-child { margin-bottom: 0; }
+    .about-card p:first-child { color: var(--ink); }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature {
+      background: white; border: 1px solid var(--line); border-radius: 17px;
+      padding: 25px; min-height: 190px;
+    }
+    .feature-icon {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      border-radius: 12px; background: #f0efff; color: var(--purple);
+      font-weight: 850; font-size: 19px; margin-bottom: 16px;
+    }
+    .feature h3 { margin: 0 0 7px; font-size: 18px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 15px; }
+    .project-card { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .project-copy { max-width: 680px; }
+    .project-copy p { margin: 0; color: var(--muted); }
+    .ibtikary-mark {
+      flex: 0 0 auto; width: 78px; height: 78px; display: grid; place-items: center;
+      border-radius: 20px; background: #f0efff; color: var(--purple);
+      font-size: 25px; font-weight: 850; letter-spacing: -1px;
+    }
+    .project-link { margin-top: 22px; }
+    .trust-note {
+      margin-top: 22px; padding: 16px 18px; border-left: 3px solid var(--teal);
+      background: #f4fbf9; color: #53636a; border-radius: 0 10px 10px 0; font-size: 14px;
+    }
+    .footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap; }
+    .footer a { color: var(--purple); text-decoration: none; font-weight: 650; }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .hero { padding: 65px 0 55px; }
+      .section { padding: 48px 0; }
+      .feature-grid { grid-template-columns: 1fr; gap: 12px; }
+      .feature { min-height: 0; }
+      .project-card { align-items: flex-start; flex-direction: column; gap: 18px; }
+      .topbar { min-height: 70px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar wrap" id="top">
+    <a class="brand" href="#top" aria-label="Eng20w landing page">
+      <span class="brand-name">eng<span>20</span>w</span>
+      <span class="brand-tag">ENGLISH 20 WORDS</span>
+    </a>
+    <a class="top-link" href="https://eng20w.com/">Visit Main Website ↗</a>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="headline">
+      <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> A smarter way to build your vocabulary</div>
+      <h1 id="headline">Learn 20 Words.<br><span>One Session at a Time.</span></h1>
+      <p class="intro">Build your English vocabulary step by step with useful words, clear meanings, pronunciation, images and practical examples.</p>
+      <div class="actions">
+        <a class="button" href="https://eng20w.com/">Visit Eng20w.com <span aria-hidden="true">→</span></a>
+        <a class="button secondary" href="#about">Discover Eng20w</a>
+      </div>
+    </section>
+
+    <section class="section soft" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="kicker">About Eng20w</div>
+          <h2 id="about-title">A focused approach to learning English vocabulary</h2>
+          <p class="section-lead">Small, structured learning sessions can make vocabulary practice clearer and easier to manage.</p>
+        </div>
+        <div class="about-card">
+          <p><strong>Eng20w is an English vocabulary learning platform designed around focused 20-word learning sessions.</strong></p>
+          <p>Learners can choose their English level and study useful vocabulary through pronunciation, images, clear meanings and practical example sentences. Words that need more practice can return for review, while learned vocabulary can be revisited through spaced review.</p>
+          <p>Our aim is to make vocabulary learning organised, practical and consistent — one session at a time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="kicker">Our learning approach</div>
+          <h2 id="approach-title">Learn with focus and keep making progress</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">20</div>
+            <h3>Focused sessions</h3>
+            <p>Study vocabulary in manageable sessions of 20 words rather than facing a long list all at once.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">Aa</div>
+            <h3>Clear learning support</h3>
+            <p>Explore pronunciation, images, meanings and practical examples to understand each word in context.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">↻</div>
+            <h3>Review and progress</h3>
+            <p>Return to words that need more practice and revisit learned vocabulary through spaced review.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="ibtikary" aria-labelledby="project-title">
+      <div class="wrap">
+        <div class="project-card">
+          <div class="project-copy">
+            <div class="kicker">Project ownership</div>
+            <h2 id="project-title">Eng20w is a project by Ibtikary</h2>
+            <p>Ibtikary develops practical digital products, platforms and online projects. Eng20w is one of its digital learning projects, focused on helping learners build English vocabulary through structured learning sessions.</p>
+            <div class="project-link">
+              <a class="button" href="https://ibtikary.online/" target="_blank" rel="noopener noreferrer">Learn More About Ibtikary ↗</a>
+            </div>
+          </div>
+          <div class="ibtikary-mark" aria-label="Ibtikary">I</div>
+        </div>
+        <div class="trust-note">For information about Ibtikary and its digital projects, visit the official Ibtikary website using the link above.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Eng20w. All rights reserved.</span>
+      <span>Developed by <a href="https://ibtikary.online/" target="_blank" rel="noopener noreferrer">Ibtikary</a></span>
+      <a href="https://eng20w.com/">Main Learning Website ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
