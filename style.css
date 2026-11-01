@@ -1,3 +1,4 @@
+
 * { box-sizing: border-box; }
 
 :root {
@@ -116,8 +117,8 @@ h1 span {
   justify-content: center;
   gap: 16px;
   border-radius: 12px;
-  background: #218c4a;
-  box-shadow: 0 7px 18px rgba(33, 140, 74, .18);
+  background: #10B981;
+  box-shadow: 0 7px 18px rgba(16, 185, 129, .18);
   color: #fff;
   text-decoration: none;
   font-size: 16px;
@@ -125,8 +126,8 @@ h1 span {
   transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
 }
 .primary-button:hover {
-  background: #19783e;
-  box-shadow: 0 9px 22px rgba(33, 140, 74, .24);
+  background: #059669;
+  box-shadow: 0 9px 22px rgba(16, 185, 129, .24);
   transform: translateY(-2px);
 }
 .primary-button:focus-visible { outline: 3px solid rgba(101, 84, 192, .35); outline-offset: 4px; }
