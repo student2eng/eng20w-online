@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eng20w.online/sitemap.xml
